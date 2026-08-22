@@ -12,7 +12,7 @@ from torchvision.models import efficientnet_b0, EfficientNet_B0_Weights
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay, accuracy_score
 
-DATASET_DIR = "dataset"
+DATASET_DIR = "dataset" 
 BATCH_SIZE = 32
 NUM_WORKERS = 4
 IMAGE_SIZE = 224
