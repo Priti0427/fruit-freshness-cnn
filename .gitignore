@@ -13,3 +13,6 @@ data/
 # Python
 __pycache__/
 *.pyc
+
+# Training logs
+*.log
