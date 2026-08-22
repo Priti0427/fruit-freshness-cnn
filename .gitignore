@@ -1,1 +1,18 @@
+# macOS
+.DS_Store
+
+# Dataset (3.8 GB, kept locally / re-downloaded)
 data/
+
+# Model checkpoints
+*.pth
+
+# Office lock files
+~$*.pptx
+
+# Python
+__pycache__/
+*.pyc
+
+# Training logs
+*.log
