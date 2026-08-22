@@ -15,3 +15,4 @@ num_features = model.classifier[1].in_features
 model.classifier = nn.Sequential(
     nn.Dropout(0.3),
     nn.Linear(num_features, 2)
+)
