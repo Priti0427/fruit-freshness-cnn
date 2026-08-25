@@ -1,6 +1,7 @@
-# Fruit Ripeness Detection
+# fruit-freshness-cnn
 
-Classifying fruit as **fresh** or **rotten** from a photograph, using an EfficientNet-B0 convolutional neural network fine-tuned in PyTorch.
+**Fruit ripeness detection.** Classifying fruit as **fresh** or **rotten** from a
+photograph, using an EfficientNet-B0 convolutional neural network fine-tuned in PyTorch.
 
 Covers three fruit types — apples, bananas and oranges.
 
@@ -40,19 +41,19 @@ Measured against three reference points:
 **Per fruit** — bananas 99.05%, apples 96.42%, oranges 95.33%.
 
 <p align="center">
-  <img src="confusion_matrix.png" width="45%" alt="Confusion matrix">
-  <img src="accuracy_curve.png" width="45%" alt="Accuracy curves">
+  <img src="results/confusion_matrix.png" width="45%" alt="Confusion matrix">
+  <img src="results/accuracy_curve.png" width="45%" alt="Accuracy curves">
 </p>
 
-Full numbers are in [`metrics.json`](metrics.json).
+Full numbers are in [`results/metrics.json`](results/metrics.json).
 
 ---
 
 ## Quick start
 
 ```bash
-git clone https://github.com/a19simru/Fruit.git
-cd Fruit
+git clone https://github.com/a19simru/fruit-freshness-cnn.git
+cd fruit-freshness-cnn
 pip install -r requirements.txt
 ```
 
@@ -62,9 +63,10 @@ Add the dataset under `data/` (see [Dataset](#dataset)), then:
 python fruit.py
 ```
 
-The script runs the full 5-fold cross-validation and writes `metrics.json`,
-`confusion_matrix.png`, `accuracy_curve.png`, `loss_curve.png`, and
-`deck_numbers.md`. Model weights go to `checkpoints/`.
+The script runs the full 5-fold cross-validation and writes everything it
+produces into `results/` — `metrics.json`, `confusion_matrix.png`,
+`accuracy_curve.png`, `loss_curve.png` and `deck_numbers.md`. Model weights go
+to `checkpoints/`.
 
 Runtime is roughly 20–25 minutes on an Apple M-series Mac. The device is picked
 automatically: Apple GPU (MPS) → NVIDIA (CUDA) → CPU.
@@ -164,14 +166,25 @@ scored highly. It could not.
 ## Project structure
 
 ```
-fruit.py              Training, evaluation and baselines
-eda.ipynb             Exploratory analysis of the dataset
-metrics.json          Full results: per fold, per class, per fruit, baselines
-deck_numbers.md       Results formatted for the presentation
-confusion_matrix.png  Pooled out-of-fold confusion matrix
-accuracy_curve.png    Accuracy, mean ± std across folds
-loss_curve.png        Loss, mean ± std across folds
+fruit.py                     Training, evaluation and baselines
+requirements.txt             Pinned dependencies
+data/                        Dataset (not committed — see Dataset)
+checkpoints/                 Per-fold model weights (not committed)
+notebooks/
+└── eda.ipynb                Exploratory analysis of the dataset
+results/
+├── metrics.json             Full results: per fold, per class, per fruit, baselines
+├── deck_numbers.md          Results formatted for the presentation
+├── confusion_matrix.png     Pooled out-of-fold confusion matrix
+├── accuracy_curve.png       Accuracy, mean ± std across folds
+├── loss_curve.png           Loss, mean ± std across folds
+└── train.log                Raw training output (not committed)
+docs/
+└── Fruit_Ripeness_Detection.pptx
 ```
+
+Everything the training run produces lands in `results/`; nothing is written to
+the project root.
 
 Key settings live at the top of `fruit.py`:
 
