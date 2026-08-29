@@ -207,7 +207,7 @@ real-world use.**
 
 **Errors are asymmetric.** 33 rotten photographs were classified as fresh, versus
 12 the other way. For a consumer application the model is more likely to pass off
-spoiled fruit than to reject good fruit — the worse direction to err in.
+spoiled fruit than to reject good fruit.
 
 **Only two classes.** An earlier version attempted a third "unripe" class, but
 those images came from a different source: 100% JPEG at a fixed 162 px width
