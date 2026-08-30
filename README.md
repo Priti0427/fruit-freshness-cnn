@@ -65,8 +65,7 @@ python fruit.py
 
 The script runs the full 5-fold cross-validation and writes everything it
 produces into `results/` — `metrics.json`, `confusion_matrix.png`,
-`accuracy_curve.png`, `loss_curve.png` and `deck_numbers.md`. Model weights go
-to `checkpoints/`.
+`accuracy_curve.png` and `loss_curve.png`. Model weights go to `checkpoints/`.
 
 Runtime is roughly 20–25 minutes on an Apple M-series Mac. The device is picked
 automatically: Apple GPU (MPS) → NVIDIA (CUDA) → CPU.
@@ -174,7 +173,6 @@ notebooks/
 └── eda.ipynb                Exploratory analysis of the dataset
 results/
 ├── metrics.json             Full results: per fold, per class, per fruit, baselines
-├── deck_numbers.md          Results formatted for the presentation
 ├── confusion_matrix.png     Pooled out-of-fold confusion matrix
 ├── accuracy_curve.png       Accuracy, mean ± std across folds
 ├── loss_curve.png           Loss, mean ± std across folds
