@@ -90,7 +90,7 @@ Compared against three reference points:
 | **EfficientNet-B0** | **97.02%** | Beats the simple baseline by 8.5 pp |
 | Shuffled-label control | 47.52% | Collapses to chance, confirming no data leakage |
 
-Per class:
+Per class results:
 
 | Class | Precision | Recall | F1 | Photographs |
 |---|---|---|---|---|
