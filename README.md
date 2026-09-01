@@ -110,7 +110,7 @@ Full numbers are in [`results/metrics.json`](results/metrics.json).
 
 Source: [Fruits fresh and rotten for classification](https://www.kaggle.com/datasets/sriramr/fruits-fresh-and-rotten-for-classification) on Kaggle.
 
-`data/` is not committed, since it is about 3.8 GB. Download it, unzip, and arrange the six `fresh*` and `rotten*` folders like this:
+Download it, unzip, and arrange the six `fresh*` and `rotten*` folders like this:
 
 ```
 data/
@@ -205,7 +205,7 @@ docs/
 └── Fruit_Ripeness_Detection.pptx
 ```
 
-Everything the training run produces goes into `results/`. Nothing is written to the project root.
+Everything the training run produces goes into `results/`. 
 
 Key settings are at the top of `fruit.py`:
 
