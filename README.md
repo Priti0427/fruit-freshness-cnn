@@ -1,6 +1,6 @@
 # fruit-freshness-cnn
 
-Classify a photo of fruit as **fresh** or **rotten**, using an EfficientNet-B0 CNN fine-tuned in PyTorch. Covers apples, bananas and oranges.
+Classify a photo of fruit as **fresh** or **rotten**, using an EfficientNet-B0 CNN fine-tuned in PyTorch. It Covers apples, bananas and oranges.
 
 ![accuracy](https://img.shields.io/badge/accuracy-97.02%25-brightgreen)
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
@@ -25,7 +25,7 @@ cd fruit-freshness-cnn
 pip install -r requirements.txt
 ```
 
-Classify any photo. No dataset needed, takes about 10 seconds:
+Classify any photo. No dataset is needed, takes about 10 seconds:
 
 ```bash
 python predict.py photo.jpg
