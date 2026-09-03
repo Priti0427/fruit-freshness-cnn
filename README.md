@@ -50,9 +50,9 @@ Options:
 - Defaults to `checkpoints/best_fold0.pth`. Use `--checkpoint` to pick another fold.
 - Preprocessing matches the validation path in `fruit.py`, so results are consistent with the reported metrics.
 
-### Retraining
+### Retraining(Optional)
 
-Optional. Needs the 3.8 GB dataset and takes 20 to 25 minutes.
+Size of the dataset: 3.8 GB and takes 20 to 25 minutes to train.
 
 1. Download the dataset (see [Dataset](#dataset)) and place it under `data/`.
 2. Run:
