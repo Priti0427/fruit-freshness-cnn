@@ -1,6 +1,6 @@
 # fruit-freshness-cnn
 
-Classify a photo of fruit as **fresh** or **rotten**, using an EfficientNet-B0 CNN fine-tuned in PyTorch. It Covers apples, bananas and oranges.
+Classify a photo of fruit as **fresh** or **rotten**, using an EfficientNet-B0 CNN fine-tuned in PyTorch. Here, three fruits are covered: Apples, Bananas and Oranges.
 
 ![accuracy](https://img.shields.io/badge/accuracy-97.02%25-brightgreen)
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
